@@ -178,3 +178,9 @@ export function getRandomNumber() {
         return false;
     }
 }
+
+export function getRandomNumberAlt() {
+    
+    return Math.floor(Math.random() * 6);
+   
+}
