@@ -171,16 +171,16 @@ test(` This function should make a random number between 0 and 5. boolean versio
 });
 
 test(` This function should make a random number between 0 and 5. number version`, (expect) => {
-    const actual1 = (getRandomNumberAlt() < 6);
     const expected1 = true;
+    const actual1 = (getRandomNumberAlt() < 6);
     expect.equal(actual1, expected1);
 
-    const actual2 = typeof getRandomNumberAlt();
     const expected2 = `number`;
+    const actual2 = typeof getRandomNumberAlt();
     expect.equal(actual2, expected2);
 
-    const actual3 = (getRandomNumberAlt() >= 0);
     const expected3 = true;
+    const actual3 = (getRandomNumberAlt() >= 0);
     expect.equal(actual3, expected3);
 });
 
