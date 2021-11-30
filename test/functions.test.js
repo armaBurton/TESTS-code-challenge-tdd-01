@@ -19,8 +19,8 @@ test('This test should add "!!!" to the end of a string', (expect) => {
     const actual1 = addExclamationPoints(`puppy`);
     expect.equal(actual1, expected1);
 
-    const expected2 = `pizza!!!`;
-    const actual2 = addExclamationPoints(`pizza`);
+    const expected2 = `string`;
+    const actual2 = typeof addExclamationPoints(`pizza`);
     expect.equal(actual2, expected2);
 
     const expected3 = `Yon Yonson!!!`;
@@ -33,8 +33,8 @@ test('this test should return (num * 7)', (expect) => {
     const actual1 = multiplyBySeven(516515);
     expect.equal(actual1, expected1);
 
-    const expected2 = 35;
-    const actual2 = multiplyBySeven(5);
+    const expected2 = 'number';
+    const actual2 = typeof multiplyBySeven(5);
     expect.equal(actual2, expected2);
 
     const expected3 = 13013;
@@ -75,8 +75,9 @@ test('This function should take in three numbers and return those numbers in an 
     const actual1 = returnAsAnArray(13013, 13, 70);
     expect.deepEqual(actual1, expected1);
 
-    const expected2 = [999999999, 3, 9];
-    const actual2 = returnAsAnArray(999999999, 3, 9);
+    const expected2 = true;
+    const check = returnAsAnArray(999999999, 3, 9);
+    const actual2 = Array.isArray(check);
     expect.deepEqual(actual2, expected2);
 
     const expected3 = [`poop`, `pee`, `fart`];
@@ -89,8 +90,8 @@ test('This function should take in three numbers and return those numbers mushed
     const actual1 = returnAsAString(13013, 13, 70);
     expect.equal(actual1, expected1);
 
-    const expected2 = `99999999939`;
-    const actual2 = returnAsAString(999999999, 3, 9);
+    const expected2 = `string`;
+    const actual2 = typeof returnAsAString(999999999, 3, 9);
     expect.equal(actual2, expected2);
 
     const expected3 = `505050`;
@@ -145,8 +146,8 @@ test(`This function should take an array and return the LAST item in the array, 
     const actual1 = getLastItem([1]);
     expect.equal(actual1, expected1);
 
-    const expected2 = 13;
-    const actual2 = getLastItem([1, 30, 13]);
+    const expected2 = `number`;
+    const actual2 = typeof getLastItem([1, 30, 13]);
     expect.equal(actual2, expected2);
 
     const expected3 = 3;
@@ -159,8 +160,8 @@ test(` This function should make a random number between 0 and 5.`, (expect) => 
     const actual1 = getRandomNumber();
     expect.equal(actual1, expected1);
 
-    const expected2 = true;
-    const actual2 = getRandomNumber();
+    const expected2 = `boolean`;
+    const actual2 = typeof getRandomNumber();
     expect.equal(actual2, expected2);
 
     const expected3 = true;
