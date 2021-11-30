@@ -9,7 +9,8 @@ import {
     makeLuckyGreeting,
     getSecondItem,
     getLastItem,
-    getRandomNumber
+    getRandomNumber,
+    getRandomNumberAlt
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -155,7 +156,7 @@ test(`This function should take an array and return the LAST item in the array, 
     expect.equal(actual3, expected3);
 });
 
-test(` This function should make a random number between 0 and 5.`, (expect) => {
+test(` This function should make a random number between 0 and 5. boolean version`, (expect) => {
     const expected1 = true;
     const actual1 = getRandomNumber();
     expect.equal(actual1, expected1);
@@ -166,6 +167,20 @@ test(` This function should make a random number between 0 and 5.`, (expect) => 
 
     const expected3 = true;
     const actual3 = getRandomNumber();
+    expect.equal(actual3, expected3);
+});
+
+test(` This function should make a random number between 0 and 5. number version`, (expect) => {
+    const actual1 = (getRandomNumberAlt() < 6);
+    const expected1 = true;
+    expect.equal(actual1, expected1);
+
+    const actual2 = typeof getRandomNumberAlt();
+    const expected2 = `number`;
+    expect.equal(actual2, expected2);
+
+    const actual3 = (getRandomNumberAlt() >= 0);
+    const expected3 = true;
     expect.equal(actual3, expected3);
 });
 
